@@ -1,0 +1,34 @@
+
+<ng-template #loading>
+  <div class="loaderCon">
+    <mat-spinner color="warn" class="loader"></mat-spinner>
+  </div>
+</ng-template>
+<ng-container *ngIf="!spinner; else loading">
+  <div class="conn" >
+    <mat-card (keydown)="keyDownFunction($event)">
+      <div class="padding10">
+        <mat-form-field class="width100">
+          <input matInput placeholder="帳號" [(ngModel)]="email">
+        </mat-form-field>
+      </div>
+
+      <div class="padding10">
+        <mat-form-field color="warn" class="width100">
+          <input matInput placeholder="密碼" [(ngModel)]="pwd" type="password">
+        </mat-form-field>
+      </div>
+
+      <div class="padding10">
+        <button mat-raised-button (click)="getLogin()" color="accent">
+          <mat-icon>power_settings_new</mat-icon> 登入
+        </button>
+      </div>
+
+      <div class="padding10 errMsg">
+        {{message}}
+      </div>
+    </mat-card>
+  </div>
+
+</ng-container>

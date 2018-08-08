@@ -17,7 +17,7 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
-
+import 'hammerjs';
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 // import 'core-js/es6/symbol';
 // import 'core-js/es6/object';
@@ -38,7 +38,7 @@
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-// import 'core-js/es6/reflect';
+import 'core-js/es6/reflect';
 
 
 /** Evergreen browsers require these. **/
